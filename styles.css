@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --border-color: #ddd;
+    --button-bg: #5c67f2;
+    --button-hover: #4854c3;
+}
+
+.dark-mode {
+    --bg-color: #181818;
+    --text-color: #fff;
+    --card-bg: #222;
+    --border-color: #555;
+    --button-bg: #ff7eb3;
+    --button-hover: #ff527b;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.task-input, #search {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.task-input input, .task-input select, #search {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.task-input button {
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.task-input button:hover {
+    background: var(--button-hover);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 5px solid;
+}
+
+.task-item.completed {
+    opacity: 0.6;
+}
+
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.task-item button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button.delete {
+    background: #e74c3c;
+    color: white;
+}
+
+#theme-toggle {
+    margin-bottom: 10px;
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    background: var(--button-hover);
+}
+
+.task-item.completed span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
